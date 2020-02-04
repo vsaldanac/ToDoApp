@@ -1,0 +1,8 @@
+<% @todos.each do |todo| %>
+<div class="well m-5">
+<p>Description homework: <%= todo.description %> </p>
+<p>¿Done?: <%= todo.completed %> </p>
+</div>
+<% end %>
+
+<%= link_to  "New homework", todos_new_path %>
