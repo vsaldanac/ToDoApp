@@ -2,7 +2,10 @@
 <div class="well m-5">
 <p>Description homework: <%= todo.description %> </p>
 <p>¿Done?: <%= todo.completed %> </p>
+<%= link_to  "Show homework", todo_path(todo) %>
+<%= link_to  "Edit homework", todos_edit_path(todo) %>
+<%= link_to  "Delete homework", todo, method: :delete, data: { confirm: 'Are you sure?' }%>
 </div>
 <% end %>
 
-<%= link_to  "New homework", todos_new_path %>
+<%= link_to  "New homework", todos_new_path %><br>
