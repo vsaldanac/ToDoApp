@@ -1,0 +1,28 @@
+<div class="container-fluid m-5">
+  <div class="row">
+    <div class="col-6">
+    <h3>Tareas incompletas</h3><br>
+      <ul>
+        <% @todos.each do |todo| %>
+            <% if todo.completed == false %>
+              <li><%= todo.description %></li>
+            <% else %>
+
+            <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-6">
+    <h3>Tareas completas</h3><br>
+      <ul>
+        <% @todos.each do |todo| %>
+            <% if todo.completed == true %>
+              <li><%= todo.description %></li>
+            <% else %>
+
+            <% end %>
+        <% end %>   
+      </ul>
+    </div>
+  </div>
+</div>

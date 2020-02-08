@@ -1,11 +1,37 @@
-<% @todos.each do |todo| %>
-<div class="well m-5">
-<p>Description homework: <%= todo.description %> </p>
-<p>¿Done?: <%= todo.completed %> </p>
-<%= link_to  "Show homework", todo_path(todo) %>
-<%= link_to  "Edit homework", todos_edit_path(todo) %>
-<%= link_to  "Delete homework", todo, method: :delete, data: { confirm: 'Are you sure?' }%>
+<div class="container-fluid m-5">
+    <div class="row">
+        <% @todos.each_with_index do |todo, index| %>
+            <div class="col-4 mb-5">
+                <div class="card" style="width: 16rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Tarea <%= index + 1 %> </h5>
+                    <p class="card-text"><%= todo.description %></p>
+                    <p class="card-text"><i>Is done?</i> <%= todo.completed %></p>
+                    <div class="btn btn-info"><%= link_to  "Show", todo_path(todo), class: 'text-white' %></div>
+                    <div class="btn btn-success"><%= link_to  "Edit", todo_edit_path(todo), class: 'text-white' %></div> 
+                    <div class="btn btn-danger"><%= link_to  "Delete", todo_delete_path(todo), method: :delete, class: 'text-white' %></div>
+                </div>
+                </div>
+            </div>
+        <% end %>  
+    </div>
 </div>
-<% end %>
 
-<%= link_to  "New homework", todos_new_path %><br>
+
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

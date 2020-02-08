@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="navbar-brand"><%= link_to "ToDoApp", todos_path, class: 'text-white' %></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item mr-3">
+        <%= link_to "New", todos_new_path, class: 'text-white' %> 
+      </li>
+      <li class="nav-item mr-3">
+        <%= link_to "Index", todos_path, class: 'text-white' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "List", todos_list_path, class: 'text-white' %>
+      </li>
+    </ul>
+  </div>
+</nav>
